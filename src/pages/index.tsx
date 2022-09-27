@@ -10,8 +10,10 @@ type test = 'a' | 'b'
 
 console.log(valuesOf<test>())
 
-const Index = () =>  {
-      const [ x ] = useState(() => container.resolve(Model))
+const Index = () => {
+	const [x] = useState(() => container.resolve(Model))
+
+	console.log(x.a)
 
 	return (
 		<div>

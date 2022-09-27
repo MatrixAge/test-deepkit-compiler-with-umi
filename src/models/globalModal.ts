@@ -1,13 +1,11 @@
 import { makeAutoObservable } from 'mobx'
 import { injectable } from 'tsyringe'
 
-import GlobalModel from '@/models/globalModal'
-
 @injectable()
-export default class Model {
-	a = 0
+export default class GlobalModel {
+	theme = 'light' as 'light' | 'dark'
 
-	constructor(public global: GlobalModel) {
+	constructor() {
 		makeAutoObservable(this, undefined, { autoBind: true })
 	}
 }
