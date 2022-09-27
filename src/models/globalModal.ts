@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx'
-import { injectable } from 'tsyringe'
+import { singleton } from 'tsyringe'
 
-@injectable()
+@singleton()
 export default class GlobalModel {
 	theme = 'light' as 'light' | 'dark'
 

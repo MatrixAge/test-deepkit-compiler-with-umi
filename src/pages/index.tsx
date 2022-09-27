@@ -13,7 +13,7 @@ console.log(valuesOf<test>())
 const Index = () => {
 	const [x] = useState(() => container.resolve(Model))
 
-	console.log(x.a)
+	console.log(x.global.theme)
 
 	return (
 		<div>

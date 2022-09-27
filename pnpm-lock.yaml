@@ -10,6 +10,7 @@ specifiers:
   babel-plugin-transform-typescript-metadata: ^0.3.2
   mobx: ^6.6.1
   mobx-react-lite: ^3.4.0
+  react-refresh-typescript: ^2.0.7
   reflect-metadata: ^0.1.13
   ts-loader: ^9.4.1
   tslib: ^2.4.0
@@ -31,6 +32,7 @@ devDependencies:
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
   babel-plugin-transform-typescript-metadata: 0.3.2
+  react-refresh-typescript: 2.0.7_typescript@4.8.3
   ts-loader: 9.4.1_typescript@4.8.3
   typescript: 4.8.3
 
@@ -7625,6 +7627,15 @@ packages:
       redux: 4.2.0
       use-sync-external-store: 1.2.0
     dev: false
+
+  /react-refresh-typescript/2.0.7_typescript@4.8.3:
+    resolution: {integrity: sha512-KbuW57FauO11e6a9gU836sCm3M3z0b2+J2qPhUudg0QplOfz0eAF3gMeshcUC/ChfNLJCK1SZxvYmUtRxiZE5A==}
+    peerDependencies:
+      react-refresh: 0.10.x || 0.11.x || 0.12.x || 0.13.x || 0.14.x
+      typescript: ^4
+    dependencies:
+      typescript: 4.8.3
+    dev: true
 
   /react-refresh/0.11.0:
     resolution: {integrity: sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==}

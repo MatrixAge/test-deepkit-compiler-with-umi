@@ -1,5 +1,6 @@
-const typeCompiler = require('@deepkit/type-compiler')
+import { join } from 'path'
 
+import * as typeCompiler from '@deepkit/type-compiler'
 import { defineConfig } from '@umijs/max'
 
 export default defineConfig({
@@ -28,11 +29,14 @@ export default defineConfig({
 			.loader(require.resolve('ts-loader'))
 			.after('babel-loader')
 			.options({
-				transpileOnly: true,
 				getCustomTransformers: () => ({
-					before: [typeCompiler.transformer],
+					before: [
+						require('react-refresh-typescript')(),
+						typeCompiler.transformer
+					],
 					afterDeclarations: [typeCompiler.declarationTransformer]
-				})
+				}),
+				configFile: join(__dirname, './tsconfig.json')
 			})
 	}
 })
